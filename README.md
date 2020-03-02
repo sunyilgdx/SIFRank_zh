@@ -1,59 +1,68 @@
-# SIFRank
-The code of our paper [SIFRank: A New Baseline for Unsupervised Keyphrase Extraction Based on Pre-trained Language Model](https://ieeexplore.ieee.org/document/8954611)
-
-## Environment
+# SIFRank_zh
+这是我们论文的相关代码 [SIFRank: A New Baseline for Unsupervised Keyphrase Extraction Based on Pre-trained Language Model](https://ieeexplore.ieee.org/document/8954611)
+原文是在对英文关键短语进行抽取，这里迁移到中文上，部分pipe进行了改动
+## 环境
 ```
 Python 3.6
 nltk 3.4.3
-StanfordCoreNLP 3.9.1.1
+elmoformanylangs 0.0.3
+thulac 0.2.1
 torch 1.1.0
 ```
-## Download
-* ELMo ``elmo_2x4096_512_2048cnn_2xhighway_options.json`` and ``elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5`` from [here](https://allennlp.org/elmo) , and save it to the ``auxiliary_data/`` directory
-* StanfordCoreNLP ``stanford-corenlp-full-2018-02-27`` from [here](https://stanfordnlp.github.io/CoreNLP/), and save it to anywhere
+## 下载
+* 哈工大ELMo ``zhs.model`` 请从 [这里](https://github.com/HIT-SCIR/ELMoForManyLangs) 下载,将其解压保存到 ``auxiliary_data/``目录下（主义要按照其要求更改config文件），本项目中已经将部分文件上传了，其中比较大的模型文件``encoder.pkl``和``token_embedder.pkl``请自行添加。
+* 清华分词工具包 ``thulac.models`` 青葱 [这里](http://thulac.thunlp.org/)下载, 将其解压保存到 ``auxiliary_data/``目录下
 
-## Usage
+## 用法
 ```
-import nltk
 from embeddings import sent_emb_sif, word_emb_elmo
 from model.method import SIFRank, SIFRank_plus
-from stanfordcorenlp import StanfordCoreNLP
-import time
+import thulac
 
-#download from https://allennlp.org/elmo
-options_file = "../auxiliary_data/elmo_2x4096_512_2048cnn_2xhighway_options.json"
-weight_file = "../auxiliary_data/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5"
+#download from https://github.com/HIT-SCIR/ELMoForManyLangs
+model_file = r'../auxiliary_data/zhs.model/'
 
-porter = nltk.PorterStemmer()
-ELMO = word_emb_elmo.WordEmbeddings(options_file, weight_file, cuda_device=0)
+ELMO = word_emb_elmo.WordEmbeddings(model_file)
 SIF = sent_emb_sif.SentEmbeddings(ELMO, lamda=1.0)
-en_model = StanfordCoreNLP(r'E:\Python_Files\stanford-corenlp-full-2018-02-27',quiet=True)#download from https://stanfordnlp.github.io/CoreNLP/
-elmo_layers_weight = [0.0, 1.0, 0.0]
+#download from http://thulac.thunlp.org/
+zh_model = thulac.thulac(model_path=r'../auxiliary_data/thulac.models/',user_dict=r'../auxiliary_data/user_dict.txt')
+elmo_layers_weight = [0.5, 0.5, 0.0]
 
-text = "Discrete output feedback sliding mode control of second order systems - a moving switching line approach The sliding mode control systems (SMCS) for which the switching variable is designed independent of the initial conditions are known to be sensitive to parameter variations and extraneous disturbances during the reaching phase. For second order systems this drawback is eliminated by using the moving switching line technique where the switching line is initially designed to pass the initial conditions and is subsequently moved towards a predetermined switching line. In this paper, we make use of the above idea of moving switching line together with the reaching law approach to design a discrete output feedback sliding mode control. The main contributions of this work are such that we do not require to use system states as it makes use of only the output samples for designing the controller. and by using the moving switching line a low sensitivity system is obtained through shortening the reaching phase. Simulation results show that the fast output sampling feedback guarantees sliding motion similar to that obtained using state feedback"
-keyphrases = SIFRank(text, SIF, en_model, N=15,elmo_layers_weight=elmo_layers_weight)
-keyphrases_ = SIFRank_plus(text, SIF, en_model, N=15, elmo_layers_weight=elmo_layers_weight)
-print(keyphrases)
-print(keyphrases_)
+text = "计算机科学与技术（Computer Science and Technology）是国家一级学科，下设信息安全、软件工程、计算机软件与理论、计算机系统结构、计算机应用技术、计算机技术等专业。 [1]主修大数据技术导论、数据采集与处理实践（Python）、Web前/后端开发、统计与数据分析、机器学习、高级数据库系统、数据可视化、云计算技术、人工智能、自然语言处理、媒体大数据案例分析、网络空间安全、计算机网络、数据结构、软件工程、操作系统等课程，以及大数据方向系列实验，并完成程序设计、数据分析、机器学习、数据可视化、大数据综合应用实践、专业实训和毕业设计等多种实践环节。"
+keyphrases = SIFRank(text, SIF, zh_model, N=15,elmo_layers_weight=elmo_layers_weight)
+keyphrases_ = SIFRank_plus(text, SIF, zh_model, N=15, elmo_layers_weight=elmo_layers_weight)
 ```
-## Evaluate the model
-Use this ``eval/sifrank_eval.py`` to evaluate SIFRank on ``Inspec``, ``SemEval2017`` and ``DUC2001 datasets``
-We also have evaluation codes for other baseline models. We will organize and upload them later, so stay tuned.
-**F1 score** when the number of keyphrases extracted N is set to 5.
+## 用例展示
+我们选取了一段百度百科中关于“计算机科学与技术”的描述作为被抽取对象（如上），用Top10来观察其效果。
+> text = "计算机科学与技术（Computer Science and Technology）是国家一级学科，下设信息安全、软件工程、计算机软件与理论、计算机系统结构、计算机应用技术、计算机技术等专业。 [1]主修大数据技术导论、数据采集与处理实践（Python）、Web前/后端开发、统计与数据分析、机器学习、高级数据库系统、数据可视化、云计算技术、人工智能、自然语言处理、媒体大数据案例分析、网络空间安全、计算机网络、数据结构、软件工程、操作系统等课程，以及大数据方向系列实验，并完成程序设计、数据分析、机器学习、数据可视化、大数据综合应用实践、专业实训和毕业设计等多种实践环节。"
+* SIFRank_zh抽取结果
+```
+关键词         权重
+大数据技术导论  0.9346
+计算机软件      0.9211
+计算机系统结构  0.9182
+高级数据库系统  0.9022
+计算机网络      0.8998
+媒体大数据案例  0.8997
+数据结构       0.8971
+软件工程       0.8955
+大数据         0.8907
+计算机技术     0.8838
+```
+* SIFRank+_zh抽取结果
+```
+计算机软件       0.9396
+计算机科学与技术  0.9286
+计算机系统结构    0.9245
+大数据技术导论    0.9222
+软件工程         0.9213
+信息             0.8787
+计算机技术       0.8778
+高级数据库系统    0.8770
+computer        0.8717
+媒体大数据案例    0.8687
+```
 
-| Models       | Inspec       | SemEval2017   | DUC2001      |
-| :-----       | :----:       | :----:        |:----:        |
-| TFIDF        | 11.28        | 12.70         |  9.21        |
-| YAKE         | 15.73        | 11.84         | 10.61        |
-| TextRank     | 24.39        | 16.43         | 13.94        |
-| SingleRank   | 24.69        | 18.23         | 21.56        |
-| TopicRank    | 22.76        | 17.10         | 20.37        |
-| PositionRank | 25.19        | 18.23         | 24.95        |
-| Multipartite | 23.05        | 17.39         | 21.86        |
-| RVA          | 21.91        | 19.59         | 20.32        |
-| EmbedRank d2v| 27.20        | 20.21         | 21.74        |
-| SIFRank      | **29.11**        | **22.59**         | 24.27        |
-| SIFRank+     | 28.49        | 21.53         | **30.88**        |
 
 ## Cite
 If you use this code, please cite this paper
