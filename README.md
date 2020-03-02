@@ -10,8 +10,8 @@ thulac 0.2.1
 torch 1.1.0
 ```
 ## 下载
-* 哈工大ELMo ``zhs.model`` 请从 [这里](https://github.com/HIT-SCIR/ELMoForManyLangs) 下载,将其解压保存到 ``auxiliary_data/``目录下（主义要按照其要求更改config文件），本项目中已经将部分文件上传了，其中比较大的模型文件``encoder.pkl``和``token_embedder.pkl``请自行添加。
-* 清华分词工具包 ``thulac.models`` 青葱 [这里](http://thulac.thunlp.org/)下载, 将其解压保存到 ``auxiliary_data/``目录下
+* 哈工大ELMo ``zhs.model`` 请从[这里](https://github.com/HIT-SCIR/ELMoForManyLangs) 下载,将其解压保存到 ``auxiliary_data/``目录下（主义要按照其要求更改config文件），本项目中已经将部分文件上传了，其中比较大的模型文件``encoder.pkl``和``token_embedder.pkl``请自行添加。
+* 清华分词工具包THULAC ``thulac.models`` 请从[这里](http://thulac.thunlp.org/)下载, 将其解压保存到 ``auxiliary_data/``目录下
 
 ## 用法
 ```
@@ -62,7 +62,32 @@ keyphrases_ = SIFRank_plus(text, SIF, zh_model, N=15, elmo_layers_weight=elmo_la
 computer        0.8717
 媒体大数据案例    0.8687
 ```
-
+* jieba分词TFIDF抽取结果
+```
+数据         0.8808
+可视化       0.5891
+技术         0.3726
+机器         0.3496
+毕业设计     0.3369
+专业         0.3260
+网络空间     0.3235
+数据库系统   0.2983
+数据结构     0.2801
+计算技术     0.2738
+```
+* jieba分词TextRank抽取结果
+```
+数据        1.0000
+技术        0.4526
+可视化      0.3170
+计算机系统  0.2488
+机器        0.2420
+结构        0.2371
+计算机      0.2365
+专业        0.2121
+网络空间    0.2103
+计算技术    0.1954
+```
 
 ## Cite
 If you use this code, please cite this paper
