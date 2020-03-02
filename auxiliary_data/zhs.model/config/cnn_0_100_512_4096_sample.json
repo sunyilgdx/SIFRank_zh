@@ -1,0 +1,26 @@
+{
+	"encoder": {
+		"name": "elmo",
+		"projection_dim": 512, 
+		"cell_clip": 3, 
+		"proj_clip": 3,
+		"dim": 4096,
+		"n_layers": 2
+  	},
+
+ 	"token_embedder": {
+ 		"name": "cnn",
+ 		"activation": "relu",
+ 		"filters": [[1, 32], [2, 32], [3, 64], [4, 128], [5, 256], [6, 512], [7, 1024]],
+ 		"n_highway": 2, 
+ 		"word_dim": 100,
+ 		"char_dim": 50,
+		"max_characters_per_token": 50 		
+ 	},
+	
+	"classifier": {
+		"name": "sampled_softmax",
+		"n_samples": 8192
+	},
+	"dropout": 0.1
+}
