@@ -1,6 +1,11 @@
 # SIFRank_zh
 这是我们论文的相关代码 [SIFRank: A New Baseline for Unsupervised Keyphrase Extraction Based on Pre-trained Language Model](https://ieeexplore.ieee.org/document/8954611)
 原文是在对英文关键短语进行抽取，这里迁移到中文上，部分pipe进行了改动。英文原版在[这里](https://github.com/sunyilgdx/SIFRank)。
+
+## 版本介绍
+* 2020/03/03——``最初版本``
+本版本中只包含了最基本的功能，部分细节还有待优化和扩充。
+
 ## 环境
 ```
 Python 3.6
