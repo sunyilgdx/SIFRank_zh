@@ -33,7 +33,7 @@ keyphrases = SIFRank(text, SIF, zh_model, N=15,elmo_layers_weight=elmo_layers_we
 keyphrases_ = SIFRank_plus(text, SIF, zh_model, N=15, elmo_layers_weight=elmo_layers_weight)
 ```
 ## 用例展示
-我们选取了一段百度百科中关于“计算机科学与技术”的描述作为被抽取对象（如上），用Top10来观察其效果。
+我们选取了一段百度百科中关于“计算机科学与技术”的描述作为被抽取对象（如下），用Top10来观察其效果。
 > text = "计算机科学与技术（Computer Science and Technology）是国家一级学科，下设信息安全、软件工程、计算机软件与理论、计算机系统结构、计算机应用技术、计算机技术等专业。 [1]主修大数据技术导论、数据采集与处理实践（Python）、Web前/后端开发、统计与数据分析、机器学习、高级数据库系统、数据可视化、云计算技术、人工智能、自然语言处理、媒体大数据案例分析、网络空间安全、计算机网络、数据结构、软件工程、操作系统等课程，以及大数据方向系列实验，并完成程序设计、数据分析、机器学习、数据可视化、大数据综合应用实践、专业实训和毕业设计等多种实践环节。"
 * SIFRank_zh抽取结果
 ```
@@ -51,6 +51,7 @@ keyphrases_ = SIFRank_plus(text, SIF, zh_model, N=15, elmo_layers_weight=elmo_la
 ```
 * SIFRank+_zh抽取结果
 ```
+关键词         权重
 计算机软件       0.9396
 计算机科学与技术  0.9286
 计算机系统结构    0.9245
@@ -64,6 +65,7 @@ computer        0.8717
 ```
 * jieba分词TFIDF抽取结果
 ```
+关键词         权重
 数据         0.8808
 可视化       0.5891
 技术         0.3726
@@ -77,6 +79,7 @@ computer        0.8717
 ```
 * jieba分词TextRank抽取结果
 ```
+关键词         权重
 数据        1.0000
 技术        0.4526
 可视化      0.3170
@@ -89,7 +92,11 @@ computer        0.8717
 计算技术    0.1954
 ```
 
-## Cite
+## 分析
+我们的SIFRank和SIFRank+采用了动态预训练词向量模型ELMo和句向量模型SIF，用完全无监督的方法进行关键短语（keyphrase）的抽取，相比于jieba的TFIDF和TextRank算法，不仅抽取的关键词更加完整，且由于引入了预训练的知识，关键词之间的关系更为丰富，不再仅限于句子结构本身。
+此外，清华的分词模型支持自定义用户词典，可以保持专有名词的完整性，并且通过ELMo的CNN编码层，对专有名词的识别和编码效果会更好。
+
+## 引用
 If you use this code, please cite this paper
 ```
 @article{DBLP:journals/access/SunQZWZ20,
