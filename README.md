@@ -1,6 +1,6 @@
 # SIFRank_zh
 这是我们论文的相关代码 [SIFRank: A New Baseline for Unsupervised Keyphrase Extraction Based on Pre-trained Language Model](https://ieeexplore.ieee.org/document/8954611)
-原文是在对英文关键短语进行抽取，这里迁移到中文上，部分pipe进行了改动
+原文是在对英文关键短语进行抽取，这里迁移到中文上，部分pipe进行了改动。英文原版在[这里](https://github.com/sunyilgdx/SIFRank)。
 ## 环境
 ```
 Python 3.6
@@ -11,7 +11,7 @@ torch 1.1.0
 ```
 ## 下载
 * 哈工大ELMo ``zhs.model`` 请从[这里](https://github.com/HIT-SCIR/ELMoForManyLangs) 下载,将其解压保存到 ``auxiliary_data/``目录下（主义要按照其要求更改config文件），本项目中已经将部分文件上传了，其中比较大的模型文件``encoder.pkl``和``token_embedder.pkl``请自行添加。
-* 清华分词工具包THULAC ``thulac.models`` 请从[这里](http://thulac.thunlp.org/)下载, 将其解压保存到 ``auxiliary_data/``目录下
+* 清华分词工具包THULAC ``thulac.models`` 请从[这里](http://thulac.thunlp.org/)下载, 将其解压保存到 ``auxiliary_data/``目录下。
 
 ## 用法
 ```
@@ -94,6 +94,7 @@ computer        0.8717
 
 ## 分析
 我们的SIFRank和SIFRank+采用了动态预训练词向量模型ELMo和句向量模型SIF，用完全无监督的方法进行关键短语（keyphrase）的抽取，相比于jieba的TFIDF和TextRank算法，不仅抽取的关键词更加完整，且由于引入了预训练的知识，关键词之间的关系更为丰富，不再仅限于句子结构本身。
+
 此外，清华的分词模型支持自定义用户词典，可以保持专有名词的完整性，并且通过ELMo的CNN编码层，对专有名词的识别和编码效果会更好。
 
 ## 引用
