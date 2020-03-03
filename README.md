@@ -15,7 +15,7 @@ thulac 0.2.1
 torch 1.1.0
 ```
 ## 下载
-* 哈工大ELMo ``zhs.model`` 请从[这里](https://github.com/HIT-SCIR/ELMoForManyLangs) 下载,将其解压保存到 ``auxiliary_data/``目录下（主义要按照其要求更改config文件），本项目中已经将部分文件上传了，其中比较大的模型文件``encoder.pkl``和``token_embedder.pkl``请自行添加。
+* 哈工大ELMo ``zhs.model`` 请从[这里](https://github.com/HIT-SCIR/ELMoForManyLangs) 下载,将其解压保存到 ``auxiliary_data/``目录下（注意要按照其要求更改config文件），本项目中已经将部分文件上传了，其中比较大的模型文件``encoder.pkl``和``token_embedder.pkl``请自行添加。
 * 清华分词工具包THULAC ``thulac.models`` 请从[这里](http://thulac.thunlp.org/)下载, 将其解压保存到 ``auxiliary_data/``目录下。
 
 ## 用法
