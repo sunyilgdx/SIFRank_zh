@@ -15,7 +15,7 @@ thulac 0.2.1
 torch 1.1.0
 ```
 ## 提示
-哈工大的elmoformanylangs 0.0.3中有个较为明显的问题，当返回所有层Embeddings的时候代码写错了，当output_layer=-2时并不是返回所有层的向量，只是返回了倒数第二层的。
+哈工大的elmoformanylangs 0.0.3中有个较为明显的问题，当返回所有层Embeddings的时候代码写错了，当output_layer=-2时并不是返回所有层的向量，只是返回了倒数第二层的。问题讨论在这里[#31](https://github.com/HIT-SCIR/ELMoForManyLangs/issues/31)
 ```
 elmo.sents2elmo(sents_tokened,output_layer=-2)
 ```
