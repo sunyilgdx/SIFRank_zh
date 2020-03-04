@@ -19,7 +19,7 @@ class InputTextObj:
         :param zh_model: the pipeline of Chinese tokenization and POS-tagger
         :param considered_tags: The POSs we want to keep
         """
-        self.considered_tags = {'NN', 'NNS', 'NNP', 'NNPS', 'JJ'}
+        self.considered_tags = {'n', 'np', 'ns', 'ni', 'nz','a','d','i','j','x','g'}
 
         self.tokens = []
         self.tokens_tagged = []

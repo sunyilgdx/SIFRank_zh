@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ca0878a-5d5c-4ac8-ac91-f0a343c53cb8" name="Default Changelist" comment="" />
+    <list default="true" id="0ca0878a-5d5c-4ac8-ac91-f0a343c53cb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embeddings/sent_emb_sif.py" beforeDir="false" afterPath="$PROJECT_DIR$/embeddings/sent_emb_sif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/input_representation.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/input_representation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,43 +58,45 @@
     <session id="-130244576">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="13" />
+          <entry key="py" value="14" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1032" />
+          <entry key="py" value="1149" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1032" />
+          <entry key="Python" value="1149" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/fileIO.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -97,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/method.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="204" column="77" lean-forward="true" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="77" />
+            <state relative-caret-position="3600">
+              <caret line="204" column="77" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="77" />
               <folding>
                 <element signature="e#90#108#0" expanded="true" />
                 <marker date="1583140074596" expanded="true" signature="2401:2406" ph="..." />
@@ -112,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="306">
               <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding>
                 <element signature="e#89#100#0" expanded="true" />
@@ -121,14 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#93#143#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -136,23 +140,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/embeddings/sent_emb_sif.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
-              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="-576">
+              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
               <folding>
                 <element signature="e#89#101#0" expanded="true" />
-                <element signature="e#428#4112#0" />
-                <element signature="e#4188#5304#0" />
-                <element signature="e#5348#5615#0" />
-                <element signature="e#5653#6152#0" />
-                <element signature="e#6215#6512#0" />
-                <element signature="e#6562#6674#0" />
-                <element signature="e#6798#8386#0" />
-                <element signature="e#8509#9996#0" />
-                <element signature="e#10077#10632#0" />
-                <element signature="e#10740#11364#0" />
-                <element signature="e#11410#11633#0" />
-                <element signature="e#11694#12578#0" />
-                <marker date="1583144028335" expanded="true" signature="5936:6240" ph="..." />
+                <marker date="1583280711313" expanded="true" signature="5934:6238" ph="..." />
               </folding>
             </state>
           </provider>
@@ -161,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/embeddings/word_emb_elmo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="434">
+              <caret line="33" column="64" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="33" selection-end-column="64" />
               <folding>
                 <element signature="e#139#176#0" expanded="true" />
               </folding>
@@ -173,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/input_representation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="182">
+              <caret line="21" column="84" lean-forward="true" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
               <folding>
                 <element signature="e#90#117#0" expanded="true" />
               </folding>
@@ -217,16 +209,17 @@
         <option value="$PROJECT_DIR$/model/method.py" />
         <option value="$PROJECT_DIR$/model/extractor.py" />
         <option value="$PROJECT_DIR$/util/fileIO.py" />
+        <option value="$PROJECT_DIR$/model/input_representation.py" />
         <option value="$PROJECT_DIR$/embeddings/sent_emb_sif.py" />
         <option value="$PROJECT_DIR$/test/test.py" />
-        <option value="$PROJECT_DIR$/model/input_representation.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -248,6 +241,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,7 +278,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,7 +369,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python">
       <module name="SIFRank" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -419,15 +412,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.input_representation" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.input_representation" />
       <item itemvalue="Python.word_emb_elmo" />
       <item itemvalue="Python.extractor" />
       <item itemvalue="Python.sent_emb_sif" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.sent_emb_sif" />
         <item itemvalue="Python.extractor" />
         <item itemvalue="Python.input_representation" />
@@ -459,12 +451,12 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22251655" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0072847684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933776" weight="0.15419847" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49933776" visible="true" weight="0.4946565" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4870229" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -542,6 +534,11 @@
           <line>30</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -603,23 +600,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Python36/Lib/site-packages/elmoformanylangs/elmo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eval/sifrank_eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="80" column="110" selection-start-line="80" selection-start-column="110" selection-end-line="80" selection-end-column="110" />
-          <folding>
-            <element signature="e#90#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/eval/sifrank_eval.py" />
     <entry file="file://E:/Python36/Lib/site-packages/nltk/chunk/regexp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -644,73 +625,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/input_representation.py">
+    <entry file="file://$PROJECT_DIR$/util/fileIO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="e#90#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/embeddings/word_emb_elmo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#139#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/embeddings/sent_emb_sif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="e#89#101#0" expanded="true" />
-            <element signature="e#428#4112#0" />
-            <element signature="e#4188#5304#0" />
-            <element signature="e#5348#5615#0" />
-            <element signature="e#5653#6152#0" />
-            <element signature="e#6215#6512#0" />
-            <element signature="e#6562#6674#0" />
-            <element signature="e#6798#8386#0" />
-            <element signature="e#8509#9996#0" />
-            <element signature="e#10077#10632#0" />
-            <element signature="e#10740#11364#0" />
-            <element signature="e#11410#11633#0" />
-            <element signature="e#11694#12578#0" />
-            <marker date="1583144028335" expanded="true" signature="5936:6240" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#93#143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#89#100#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/method.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="204" column="77" lean-forward="true" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="77" />
+        <state relative-caret-position="3600">
+          <caret line="204" column="77" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="77" />
           <folding>
             <element signature="e#90#108#0" expanded="true" />
             <marker date="1583140074596" expanded="true" signature="2401:2406" ph="..." />
@@ -720,10 +645,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/fileIO.py">
+    <entry file="file://E:/Python36/Lib/site-packages/elmoformanylangs/elmo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="2144">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#89#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/input_representation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="21" column="84" lean-forward="true" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+          <folding>
+            <element signature="e#90#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/embeddings/word_emb_elmo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="33" column="64" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="33" selection-end-column="64" />
+          <folding>
+            <element signature="e#139#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/embeddings/sent_emb_sif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+          <folding>
+            <element signature="e#89#101#0" expanded="true" />
+            <marker date="1583280711313" expanded="true" signature="5934:6238" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -38,10 +38,10 @@ class SentEmbeddings():
         """
         # choose the type of word embeddings:elmo or elmo_transformer or glove
         if(self.embeddings_type=="elmo" and if_DS==False):
-            elmo_embeddings, elmo_mask = self.word_embeddor.get_tokenized_words_embeddings([text_obj.tokens])
+            elmo_embeddings= self.word_embeddor.get_tokenized_words_embeddings([text_obj.tokens])
         elif(self.embeddings_type=="elmo" and if_DS==True and if_EA==False):
             tokens_segmented = get_sent_segmented(text_obj.tokens)
-            elmo_embeddings, elmo_mask = self.word_embeddor.get_tokenized_words_embeddings(tokens_segmented)
+            elmo_embeddings= self.word_embeddor.get_tokenized_words_embeddings(tokens_segmented)
             elmo_embeddings = splice_embeddings(elmo_embeddings,tokens_segmented)
         elif (self.embeddings_type == "elmo" and if_DS == True and if_EA == True):
             tokens_segmented = get_sent_segmented(text_obj.tokens)
@@ -78,7 +78,7 @@ def context_embeddings_alignment(elmo_embeddings, tokens_segmented):
     Embeddings Alignment
     :param elmo_embeddings: The embeddings from elmo
     :param tokens_segmented: The list of tokens list
-     <class 'list'>: [['Twenty', 'years', ...,'practices', '.'],['The', 'out-of-print',..., 'libraries']]
+     <class 'list'>: [['今', '天', '天气', '真', '好', '啊'],['潮水', '退', '了', '就', '知道', '谁', '没', '穿', '裤子']]
     :return:
     """
     token_emb_map = {}
