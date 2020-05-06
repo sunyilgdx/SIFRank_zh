@@ -127,7 +127,7 @@ def get_sent_segmented(tokens):
     else:
         position = 0
         for i, token in enumerate(tokens):
-            if (token == '.'):
+            if (token == '.' or token =='。'):
                 if (i - position >= min_seq_len):
                     sents_sectioned.append(tokens[position:i + 1])
                     position = i + 1
