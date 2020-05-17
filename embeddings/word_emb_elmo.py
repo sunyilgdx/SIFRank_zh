@@ -24,8 +24,9 @@ class WordEmbeddings():
         :param tokenized_sents: list of tokenized words string (sentences/phrases)
         :return: ndarray with shape (len(sents), dimension of embeddings)
         """
-
+        max_len = max([len(sent) for sent in sents_tokened])
         elmo_embedding = self.elmo.sents2elmo(sents_tokened,output_layer=-2)
+        elmo_embedding = [np.pad(emb, pad_width=((0,0),(0,max_len-emb.shape[1]),(0,0)) , mode='constant') for emb in elmo_embedding]
         elmo_embedding = torch.from_numpy(np.array(elmo_embedding))
         return elmo_embedding
 
